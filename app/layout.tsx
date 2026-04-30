@@ -56,7 +56,11 @@ export default async function RootLayout({
       lang={locale}
       className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {/* Runs synchronously before React hydration — prevents browser scroll restoration */}
+        <script dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual';window.scrollTo(0,0);" }} />
+        {children}
+      </body>
     </html>
   );
 }
