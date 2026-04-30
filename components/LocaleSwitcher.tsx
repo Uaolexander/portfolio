@@ -11,7 +11,7 @@ export function LocaleSwitcher() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  const other = locale === 'en' ? 'uk' : 'en';
+  const other = locale === 'en' ? 'ua' : 'en';
 
   function switchLocale() {
     startTransition(() => {
@@ -27,9 +27,9 @@ export function LocaleSwitcher() {
       style={{ letterSpacing: '0.05em' }}
       aria-label="Switch language"
     >
-      <span className="text-text">{t(locale as 'en' | 'uk')}</span>
+      <span className="text-text">{t(locale as 'en' | 'ua')}</span>
       <span className="text-text-low">/</span>
-      <span>{t(other as 'en' | 'uk')}</span>
+      <span>{t(other as 'en' | 'ua')}</span>
     </button>
   );
 }

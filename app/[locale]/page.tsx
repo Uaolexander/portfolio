@@ -8,10 +8,12 @@ import { Stats } from '@/components/Stats';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { CursorSpotlight } from '@/components/CursorSpotlight';
+import { ScrollReset } from '@/components/ScrollReset';
 
 export default function Home() {
   return (
     <>
+      <ScrollReset />
       <CursorSpotlight />
       <Navbar />
       <main>

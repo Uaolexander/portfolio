@@ -158,7 +158,7 @@ export function Hero() {
               </div>
 
               {/* Code */}
-              <div className="p-6 font-mono text-[13px] leading-[1.8]">
+              <div className="px-6 pt-6 pb-16 font-mono text-[13px] leading-[1.8]">
                 {codeLines.map((line, i) => (
                   <div key={i}>
                     {line.tokens.length === 0 ? (

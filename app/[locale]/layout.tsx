@@ -40,7 +40,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as 'en' | 'uk')) {
+  if (!routing.locales.includes(locale as 'en' | 'ua')) {
     notFound();
   }
 
