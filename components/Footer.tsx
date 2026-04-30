@@ -24,7 +24,7 @@ export function Footer() {
               AV
             </div>
             <p className="text-text-low text-[12px] font-mono">
-              {t('copy')} — {t('rights')}
+              {t('copy')}. {t('rights')}
             </p>
           </div>
 

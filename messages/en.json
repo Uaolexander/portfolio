@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Oleksandr Vdovychenko — Web & Bot Developer",
+    "title": "Oleksandr Vdovychenko | Web & Bot Developer",
     "description": "Web and bot developer based in Poznan. I build websites and Telegram bots for small businesses."
   },
   "nav": {
@@ -48,13 +48,13 @@
   "botDemo": {
     "label": "See it in action",
     "heading": "Try the bot",
-    "subheading": "Type something — just like your customers would.",
+    "subheading": "Type something, just like your customers would.",
     "placeholder": "Ask about websites, bots, pricing...",
     "send": "Send",
     "typing": "typing...",
     "welcomeMsg": "Hi! I'm Alex's bot. Ask me anything about websites or bots.",
-    "responseWebsite": "I build fast, modern websites with Next.js — from landing pages to full platforms. What kind of site do you need?",
-    "responseBot": "Telegram bots are my specialty. Automation, FAQ bots, AI assistants — what task do you want to automate?",
+    "responseWebsite": "I build fast, modern websites with Next.js, from landing pages to full platforms. What kind of site do you need?",
+    "responseBot": "Telegram bots are my specialty: automation, FAQ bots, AI assistants. What task do you want to automate?",
     "responsePrice": "Pricing depends on the project scope. Describe what you need and I'll send a detailed quote within 24 hours.",
     "responseHello": "Hey! Ready to build something useful together? Tell me about your project.",
     "responseDefault": "Great question! Let's discuss it directly. Write to Alex at @alexvdovych or use the contact form below."
@@ -62,8 +62,8 @@
   "about": {
     "label": "About Me",
     "heading": "I'm Alex, nice to meet you",
-    "p1": "I've been building websites and bots for a few years now. Some I make for clients, some for myself. The biggest one I'm proud of is <link>English Nerd</link> — a free English learning platform I built from scratch, both as the developer and the teacher behind the content.",
-    "p2": "Before code, I taught English. I still do. That background shows up in my work — I care about the details, explain things clearly, and notice when something on a page makes you stop and squint.",
+    "p1": "I've been building websites and bots for a few years now. Some I make for clients, some for myself. The biggest one I'm proud of is <link>English Nerd</link>, a free English learning platform I built from scratch, both as the developer and the teacher behind the content.",
+    "p2": "Before code, I taught English. I still do. That background shows up in my work: I care about the details, explain things clearly, and notice when something on a page makes you stop and squint.",
     "p3": "I speak five languages, I've lived in seven countries, and I'm currently in Poznan. Most clients find me through word of mouth.",
     "highlight1": "Clean & modern code",
     "highlight1sub": "I follow best practices",
