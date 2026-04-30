@@ -28,16 +28,7 @@ export function BotDemo() {
     endRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, typing]);
 
-  function getResponse(msg: string): string {
-    const m = msg.toLowerCase();
-    if (/website|site|сайт|landing|лендінг|лендинг/.test(m)) return t('responseWebsite');
-    if (/bot|бот|telegram|automation|автоматиз/.test(m)) return t('responseBot');
-    if (/price|cost|ціна|вартість|скільки|how much|почому/.test(m)) return t('responsePrice');
-    if (/hello|hi|привіт|hey|добрий|доброго|hej/.test(m)) return t('responseHello');
-    return t('responseDefault');
-  }
-
-  function send() {
+  async function send() {
     const text = input.trim();
     if (!text || typing) return;
 
@@ -46,12 +37,20 @@ export function BotDemo() {
     setInput('');
     setTyping(true);
 
-    const delay = 1000 + Math.random() * 800;
-    setTimeout(() => {
-      const botMsg: Message = { role: 'bot', text: getResponse(text), id: idRef.current++ };
-      setMessages((prev) => [...prev, botMsg]);
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text }),
+      });
+      const data = await res.json();
+      const reply = data.reply || t('responseDefault');
+      setMessages((prev) => [...prev, { role: 'bot', text: reply, id: idRef.current++ }]);
+    } catch {
+      setMessages((prev) => [...prev, { role: 'bot', text: t('responseDefault'), id: idRef.current++ }]);
+    } finally {
       setTyping(false);
-    }, delay);
+    }
   }
 
   return (
