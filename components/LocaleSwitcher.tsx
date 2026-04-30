@@ -20,19 +20,16 @@ export function LocaleSwitcher() {
   }
 
   return (
-    <div
-      className="absolute top-6 right-6 flex items-center gap-2 font-mono text-[11px] tracking-widest uppercase"
+    <button
+      onClick={switchLocale}
+      disabled={isPending}
+      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border font-mono text-[12px] text-text-dim hover:text-text hover:border-accent/40 transition-all duration-200 disabled:opacity-50"
+      style={{ letterSpacing: '0.05em' }}
       aria-label="Switch language"
     >
       <span className="text-text">{t(locale as 'en' | 'uk')}</span>
       <span className="text-text-low">/</span>
-      <button
-        onClick={switchLocale}
-        disabled={isPending}
-        className="text-text-low hover:text-text-dim transition-colors duration-150 disabled:opacity-50"
-      >
-        {t(other as 'en' | 'uk')}
-      </button>
-    </div>
+      <span>{t(other as 'en' | 'uk')}</span>
+    </button>
   );
 }

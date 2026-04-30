@@ -8,18 +8,11 @@ export function CursorSpotlight() {
 
   useEffect(() => {
     const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    const reducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches;
-
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (isTouch || reducedMotion) return;
 
     setActive(true);
-
-    const handler = (e: MouseEvent) => {
-      setPos({ x: e.clientX, y: e.clientY });
-    };
-
+    const handler = (e: MouseEvent) => setPos({ x: e.clientX, y: e.clientY });
     window.addEventListener('mousemove', handler);
     return () => window.removeEventListener('mousemove', handler);
   }, []);
@@ -30,7 +23,7 @@ export function CursorSpotlight() {
     <div
       className="pointer-events-none fixed inset-0 z-30"
       style={{
-        background: `radial-gradient(600px at ${pos.x}px ${pos.y}px, rgba(232, 220, 196, 0.05), transparent 80%)`,
+        background: `radial-gradient(600px at ${pos.x}px ${pos.y}px, rgba(91,127,255,0.04), transparent 80%)`,
       }}
     />
   );
