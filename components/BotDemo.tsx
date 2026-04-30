@@ -13,7 +13,7 @@ export function BotDemo() {
   ]);
   const [input, setInput] = useState('');
   const [typing, setTyping] = useState(false);
-  const endRef = useRef<HTMLDivElement>(null);
+  const chatRef = useRef<HTMLDivElement>(null);
   const idRef = useRef(1);
   const welcomeSet = useRef(false);
 
@@ -25,7 +25,9 @@ export function BotDemo() {
   }, [t]);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatRef.current) {
+      chatRef.current.scrollTop = chatRef.current.scrollHeight;
+    }
   }, [messages, typing]);
 
   async function send() {
@@ -137,7 +139,7 @@ export function BotDemo() {
               </div>
 
               {/* Messages */}
-              <div className="h-[240px] overflow-y-auto p-4 space-y-3 flex flex-col">
+              <div ref={chatRef} className="h-[240px] overflow-y-auto p-4 space-y-3 flex flex-col">
                 {messages.map((msg) => (
                   <AnimatePresence key={msg.id}>
                     <motion.div
@@ -197,7 +199,6 @@ export function BotDemo() {
                   </motion.div>
                 )}
 
-                <div ref={endRef} />
               </div>
 
               {/* Input */}

@@ -52,7 +52,7 @@
     "placeholder": "Ask about websites, bots, pricing...",
     "send": "Send",
     "typing": "typing...",
-    "welcomeMsg": "Hi! I'm Alex's bot. Ask me anything about websites or bots.",
+    "welcomeMsg": "Hi! I'm Alex's assistant bot. I can tell you about his services, projects, and pricing — or help you get in touch. What would you like to know?",
     "responseWebsite": "I build fast, modern websites with Next.js, from landing pages to full platforms. What kind of site do you need?",
     "responseBot": "Telegram bots are my specialty: automation, FAQ bots, AI assistants. What task do you want to automate?",
     "responsePrice": "Pricing depends on the project scope. Describe what you need and I'll send a detailed quote within 24 hours.",
