@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev *)",
+      "Bash(npm run build *)",
+      "Bash(npm run lint *)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(ls -la *)",
+      "Bash(ls -lh *)",
+      "Bash(grep -n *)",
+      "Bash(grep -rn *)",
+      "Bash(grep -r *)",
+      "Bash(grep -rl *)",
+      "Bash(grep -rln *)",
+      "Bash(find ~/Desktop/Projects/portfolio *)",
+      "Bash(sleep *)",
+      "Bash(pkill -f *)",
+      "Bash(mkdir -p *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(rm *)",
+      "Bash(PORT=* npm run dev)"
+    ]
+  }
+}
