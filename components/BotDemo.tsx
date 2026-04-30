@@ -33,15 +33,20 @@ export function BotDemo() {
     if (!text || typing) return;
 
     const userMsg: Message = { role: 'user', text, id: idRef.current++ };
-    setMessages((prev) => [...prev, userMsg]);
+    const nextMessages = [...messages, userMsg];
+    setMessages(nextMessages);
     setInput('');
     setTyping(true);
 
     try {
+      const history = nextMessages
+        .filter((m) => m.text)
+        .map((m) => ({ role: m.role === 'bot' ? 'assistant' : 'user', content: m.text }));
+
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({ messages: history }),
       });
       const data = await res.json();
       const reply = data.reply || t('responseDefault');
