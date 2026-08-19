@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Oleksandr Vdovychenko | Programista stron i botów",
+    "description": "Programista stron internetowych i botów z Poznania. Tworzę strony i boty Telegram dla małych firm."
+  },
+  "nav": {
+    "home": "Strona główna",
+    "projects": "Projekty",
+    "about": "O mnie",
+    "skills": "Umiejętności",
+    "contact": "Kontakt",
+    "letsTalk": "Napisz do mnie"
+  },
+  "hero": {
+    "badge": "Dostępny do projektów",
+    "headline": "Tworzę",
+    "word1": "szybkie strony",
+    "word2": "szybkie boty",
+    "word3": "szybką automatyzację",
+    "headline2": "które rozwiązują prawdziwe problemy",
+    "description": "Programista stron internetowych i botów skupiony na budowaniu nowoczesnych produktów cyfrowych i systemów automatyzacji dla firm.",
+    "viewProjects": "Zobacz projekty",
+    "contactMe": "Napisz do mnie"
+  },
+  "projects": {
+    "label": "Wybrane prace",
+    "heading": "Projekty, które robią różnicę",
+    "subheader": "Kilka rzeczy, które zbudowałem i wdrożyłem.",
+    "liveLabel": "Live",
+    "privateLabel": "Prywatny",
+    "inProgressLabel": "W trakcie",
+    "visitLabel": "Odwiedź",
+    "ndaNote": "NDA, poproś o demo",
+    "viewAll": "Wszystkie projekty"
+  },
+  "skills": {
+    "label": "Co robię",
+    "heading": "Umiejętności i technologie",
+    "web": "Tworzenie stron",
+    "webItems": ["Next.js", "React", "TypeScript", "Tailwind CSS", "HTML / CSS"],
+    "bots": "Backend i boty",
+    "botsItems": ["Node.js", "Python", "Boty Telegram", "REST APIs", "OpenAI API"],
+    "tools": "Narzędzia",
+    "toolsItems": ["Git & GitHub", "Vercel / Docker", "Figma", "Postman", "Linux / VPS"],
+    "focus": "Moje podejście",
+    "focusItems": ["Czysty kod", "Wydajność", "UX", "Automatyzacja", "Realne wyniki"]
+  },
+  "botDemo": {
+    "label": "Zobacz w akcji",
+    "heading": "Wypróbuj bota",
+    "subheading": "Napisz coś, tak jak napisałby Twój klient.",
+    "placeholder": "Zapytaj o strony, boty, usługi...",
+    "send": "Wyślij",
+    "typing": "pisze...",
+    "welcomeMsg": "Cześć! Jestem asystentem Aleksandra. Opowiem o jego usługach, projektach i cenach, albo pomogę się skontaktować. O co chcesz zapytać?",
+    "responseWebsite": "Tworzę szybkie, nowoczesne strony na Next.js, od landing page'y po pełne platformy. Jakiego rodzaju strony potrzebujesz?",
+    "responseBot": "Boty Telegram to moja specjalność: automatyzacja, boty FAQ, asystenci AI. Co chcesz zautomatyzować?",
+    "responsePrice": "Cena zależy od zakresu projektu. Opisz czego potrzebujesz, a wyślę szczegółową wycenę w ciągu 24 godzin.",
+    "responseHello": "Cześć! Gotowy zbudować coś użytecznego razem? Opowiedz mi o swoim projekcie.",
+    "responseDefault": "Dobre pytanie! Porozmawiajmy bezpośrednio. Napisz do Aleksandra @alexvdovych lub użyj formularza poniżej."
+  },
+  "about": {
+    "label": "O mnie",
+    "heading": "Mam na imię Aleksander, miło mi Cię poznać.",
+    "p1": "Buduję strony internetowe i boty od kilku lat, ponad 25 zrealizowanych projektów. Część dla klientów, część dla siebie. Największa rzecz, z której jestem dumny to <link>English Nerd</link>, bezpłatna platforma do nauki angielskiego, którą zbudowałem od zera, zarówno jako programista, jak i autor treści.",
+    "p2": "Przed programowaniem uczyłem angielskiego. Nadal to robię. To widać w mojej pracy: dbam o szczegóły, tłumaczę prosto i zauważam, kiedy coś na stronie sprawia, że trzeba się zatrzymać.",
+    "p3": "Mówię pięcioma językami, mieszkałem w siedmiu krajach, teraz w Poznaniu. Większość klientów trafia do mnie z polecenia.",
+    "highlight1": "Czysty, nowoczesny kod",
+    "highlight1sub": "Stosuję najlepsze praktyki",
+    "highlight2": "Jasna komunikacja",
+    "highlight2sub": "Zawsze wiesz, na jakim etapie jesteśmy",
+    "highlight3": "Terminowe dostarczenie",
+    "highlight3sub": "Szanuję Twój czas",
+    "highlight4": "Wsparcie po wdrożeniu",
+    "highlight4sub": "Jestem do dyspozycji nawet po launchu",
+    "imageAlt": "Aleksander Wdowyczenko",
+    "displayName": "Alex Vdovychenko"
+  },
+  "stats": {
+    "label": "W liczbach",
+    "s1value": "25+",
+    "s1label": "Ukończonych projektów",
+    "s2value": "2+",
+    "s2label": "Lata doświadczenia",
+    "s3value": "100%",
+    "s3label": "Zadowolonych klientów",
+    "s4value": "24h",
+    "s4label": "Czas odpowiedzi"
+  },
+  "contact": {
+    "label": "Zacznijmy współpracę",
+    "heading": "Masz projekt w głowie?",
+    "description": "Napisz do mnie, a odpowiem jak najszybciej.",
+    "nameLabel": "Imię",
+    "emailLabel": "Email",
+    "telegramLabel": "Telegram lub telefon",
+    "messageLabel": "Wiadomość",
+    "submitLabel": "Wyślij wiadomość",
+    "sendingLabel": "Wysyłanie...",
+    "sentLabel": "Wysłano!",
+    "errorLabel": "Coś poszło nie tak. Spróbuj ponownie.",
+    "orWrite": "Inne sposoby kontaktu",
+    "telegramBtn": "Telegram",
+    "whatsappBtn": "WhatsApp",
+    "emailBtn": "Email",
+    "namePlaceholder": "Twoje imię",
+    "emailPlaceholder": "twoj@email.com",
+    "telegramPlaceholder": "@username lub +48...",
+    "messagePlaceholder": "Opowiedz mi o swoim projekcie..."
+  },
+  "footer": {
+    "copy": "© Oleksandr Vdovychenko",
+    "rights": "Wszelkie prawa zastrzeżone."
+  },
+  "localeSwitcher": {
+    "en": "EN",
+    "ua": "UA",
+    "pl": "PL"
+  }
+}

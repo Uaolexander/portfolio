@@ -49,10 +49,10 @@
     "label": "See it in action",
     "heading": "Try the bot",
     "subheading": "Type something, just like your customers would.",
-    "placeholder": "Ask about websites, bots, pricing...",
+    "placeholder": "Ask about websites, bots, services...",
     "send": "Send",
     "typing": "typing...",
-    "welcomeMsg": "Hi! I'm Alex's assistant bot. I can tell you about his services, projects, and pricing — or help you get in touch. What would you like to know?",
+    "welcomeMsg": "Hi! I'm Alex's assistant bot. I can tell you about his services, projects and pricing, or help you get in touch. What would you like to know?",
     "responseWebsite": "I build fast, modern websites with Next.js, from landing pages to full platforms. What kind of site do you need?",
     "responseBot": "Telegram bots are my specialty: automation, FAQ bots, AI assistants. What task do you want to automate?",
     "responsePrice": "Pricing depends on the project scope. Describe what you need and I'll send a detailed quote within 24 hours.",
@@ -62,7 +62,7 @@
   "about": {
     "label": "About Me",
     "heading": "I'm Alex, nice to meet you",
-    "p1": "I've been building websites and bots for a few years now. Some I make for clients, some for myself. The biggest one I'm proud of is <link>English Nerd</link>, a free English learning platform I built from scratch, both as the developer and the teacher behind the content.",
+    "p1": "I've been building websites and bots for a few years now, 25+ projects shipped so far. Some I make for clients, some for myself. The biggest one I'm proud of is <link>English Nerd</link>, a free English learning platform I built from scratch, both as the developer and the teacher behind the content.",
     "p2": "Before code, I taught English. I still do. That background shows up in my work: I care about the details, explain things clearly, and notice when something on a page makes you stop and squint.",
     "p3": "I speak five languages, I've lived in seven countries, and I'm currently in Poznan. Most clients find me through word of mouth.",
     "highlight1": "Clean & modern code",
@@ -73,11 +73,12 @@
     "highlight3sub": "I respect your time",
     "highlight4": "Long-term support",
     "highlight4sub": "I'm here even after launch",
-    "imageAlt": "Alex Vdovych"
+    "imageAlt": "Alex Vdovych",
+    "displayName": "Alex Vdovychenko"
   },
   "stats": {
     "label": "By the numbers",
-    "s1value": "10+",
+    "s1value": "25+",
     "s1label": "Projects completed",
     "s2value": "2+",
     "s2label": "Years of experience",
@@ -113,6 +114,7 @@
   },
   "localeSwitcher": {
     "en": "EN",
-    "ua": "UA"
+    "ua": "UA",
+    "pl": "PL"
   }
 }

@@ -7,7 +7,7 @@ import { ArrowUpRight, Lock, Circle } from 'lucide-react';
 import type { Project } from '@/content/projects';
 
 export function ProjectRow({ project }: { project: Project }) {
-  const locale = useLocale() as 'en' | 'uk';
+  const locale = useLocale() as 'en' | 'ua' | 'pl';
   const t = useTranslations('projects');
 
   const hasLink = project.links && project.links.length > 0;

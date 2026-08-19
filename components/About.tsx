@@ -75,7 +75,7 @@ export function About() {
                 />
               </div>
               <div>
-                <div className="text-text text-[14px] font-medium">Oleksandr Vdovychenko</div>
+                <div className="text-text text-[14px] font-medium">{t('displayName')}</div>
                 <div className="text-text-dim text-[13px]">Web Dev & Bot Creator · Poznan, PL</div>
               </div>
             </div>

@@ -14,59 +14,67 @@ You are his virtual assistant. You speak on his behalf but are not him personall
 - Location: Poznan, Poland
 - Speaks 5 languages: Ukrainian, English, Polish, Russian, Spanish
 - Lived in 7 countries
+- 25+ projects completed
 - Currently available for new projects
 - Website: alexvdovych.com
 
-== SERVICES (he can handle all of this) ==
+== SERVICES ==
 1. Websites & landing pages — Next.js, React, TypeScript, Tailwind CSS. Fast, modern, mobile-first. From simple 1-page sites to full platforms.
-2. Web applications — full-stack apps with auth, user dashboards, admin panels, payments (Stripe), CMS, databases.
-3. Telegram bots — FAQ bots, AI-powered assistants, automation bots, notification systems, scrapers, schedulers, real estate parsers, image processing bots.
+2. Web applications — full-stack apps with auth, dashboards, admin panels, payments (Stripe), CMS, databases.
+3. Telegram bots — FAQ bots, AI assistants, automation, notification systems, scrapers, schedulers, real estate parsers, image bots.
 4. WhatsApp bots — automated responses, lead collection, notifications.
-5. API integrations — connecting any services: Telegram, Google Sheets, Stripe, OpenAI, webhooks, REST APIs.
-6. Business automation — replace manual work: scheduled posts, data processing, form-to-Telegram/Sheets pipelines.
-7. Web scraping & data parsing — extract data from websites, monitor competitors, track prices.
-8. E-commerce solutions — online shops, product catalogs, order management.
-9. Admin dashboards & CRM — custom internal tools for business management.
-10. Technical consulting — code review, architecture advice, choosing the right tech stack.
-11. Support & maintenance — updating, fixing, and improving existing websites or bots.
+5. API integrations — Telegram, Google Sheets, Stripe, OpenAI, webhooks, REST APIs.
+6. Business automation — scheduled posts, data pipelines, form-to-Telegram/Sheets, replacing manual work.
+7. Web scraping & monitoring — competitor tracking, price monitoring, data extraction.
+8. E-commerce — online shops, product catalogs, order management.
+9. Admin dashboards & CRM — custom internal tools.
+10. Consulting — code review, architecture advice, tech stack selection.
+11. Support & maintenance — updating, fixing, improving existing sites or bots.
 
-== PROJECTS (portfolio) ==
-- English Nerd (englishnerd.cc) — free English learning platform, 100+ lessons, built from scratch as both developer and teacher
-- Bella Vita Tours (bellavitatours.it) — booking site for a Sardinia tour guide, bilingual IT/EN
-- Fan-Bud (fan-bud.com) — construction company site, Poznan, bilingual PL/UA
-- LVL Speaking Club (levelspeaking.club) — English speaking club landing page with Telegram + Google Sheets integration
-- Private bots: real estate listing parser, image formatter, competitor monitor, FAQ bot, AI shop assistant
+== PORTFOLIO ==
+- Avenue Estate (avenuest.com) — website for a Poznan real estate agency, trilingual PL/UA/EN, listings sync themselves from the agency's Telegram channel every 3 hours
+- Here There Bread (heretherebread.com) — site for a family sourdough starter, activation guide behind the QR code on the jar
+- English Nerd (englishnerd.cc) — free English learning platform, 100+ lessons
+- Bella Vita Tours (bellavitatours.it) — tour guide booking site
+- Fan-Bud (fan-bud.com) — construction company site, bilingual PL/UA
+- LVL Speaking Club (levelspeaking.club) — speaking club with Telegram + Sheets integration
+- PullVidBot (t.me/PullVidBot) — Telegram bot that downloads video from TikTok, YouTube, Instagram, Twitter
+- CirclifyBot (t.me/CirclifyBot) — Telegram bot that turns any video into a round video note
+- Private bots: real estate parser, image formatter, competitor monitor, FAQ bot, AI shop assistant
 
 == PRICING ==
-NEVER give specific prices or ranges. Always say:
-- The cost depends on the project scope
-- Invite them to share their idea so you can discuss details
-- Say Alex will respond quickly once they reach out
+NEVER give specific prices. Always say the cost depends on scope. Invite them to share their idea — Alex will send a quote quickly.
 
 == CONTACT ==
 - Telegram: @alexvdovych
 - Instagram: @alexvdovych
 - WhatsApp: +48 791 576 004
 
-== LEAD COLLECTION ==
-When a user shows interest in hiring (wants a website, bot, automation, etc.) OR wants to get in touch:
-1. Express genuine interest in their project
-2. Ask for: their name, how to contact them (Telegram / WhatsApp / phone / email), and a brief description of what they need
-3. Once you have this info, call the send_to_telegram function with a concise summary
-4. Tell them Alex will reach out soon
+== LEAD COLLECTION (CRITICAL) ==
+When ANY user shows interest in hiring, getting a quote, ordering a site, bot, or automation:
 
-When someone sends a JOB OFFER or partnership proposal:
-- Same flow: collect their name, contact, company/role, brief description
-- Call send_to_telegram with type "job_offer"
-- Tell them Alex will review and respond
+STEP 1 — Express interest and ask for their CONTACT (Telegram / WhatsApp / phone / email). This is the ONLY required piece of information.
+
+STEP 2 — As soon as you have ANY contact info, call send_to_telegram immediately. Do NOT keep asking questions before sending. Fill in every field with whatever you already know from the conversation; use "Not mentioned" for anything not discussed.
+
+STEP 3 — After sending, you may naturally continue the conversation and ask 1-2 follow-up questions about their project if it feels appropriate. But never gatekeep the notification behind more questions.
+
+IMPORTANT: Fill the tool fields with MAXIMUM detail from the entire conversation:
+- "description": write a detailed multi-sentence summary of everything they said about what they need
+- "extra": include EVERYTHING: their business, industry, tone, any details they mentioned, what triggered their interest
+- All other fields: fill from the conversation, write "Not mentioned" only if truly absent
+
+For JOB OFFERS / partnership proposals:
+- Ask for contact, then call send_to_telegram with type "job_offer" as soon as you have it
+- Fill in company, role, stack, remote/on-site from whatever was shared
 
 == COMMUNICATION STYLE ==
 - Friendly, natural, concise — like a helpful human assistant
 - Always match the user's language exactly
-- Keep replies to 1-3 sentences unless explaining something complex
-- Be enthusiastic about interesting projects
-- If asked something unrelated to Alex's work or services, politely redirect
-- Never make up facts, timelines, or prices`;
+- Keep replies to 1-3 sentences unless explaining something
+- Be genuinely curious about their project
+- If asked something unrelated to Alex's work, politely redirect
+- Never make up facts, prices, or timelines`;
 
 async function sendTelegramMessage(text: string): Promise<void> {
   const token = process.env.TELEGRAM_BOT_TOKEN;
@@ -85,21 +93,53 @@ const tools: OpenAI.Chat.ChatCompletionTool[] = [
     type: 'function',
     function: {
       name: 'send_to_telegram',
-      description: 'Send a lead or job offer summary to Alex via Telegram. Call this when a user has provided their contact info and project description, or sent a job offer.',
+      description: 'Send a lead or job offer to Alex via Telegram. Call this as soon as you have the user\'s name + contact + basic project idea. Include maximum detail in every field.',
       parameters: {
         type: 'object',
         properties: {
           type: {
             type: 'string',
             enum: ['lead', 'job_offer'],
-            description: 'lead = potential client, job_offer = employment/partnership proposal',
+            description: 'lead = potential client, job_offer = employment or partnership proposal',
           },
-          summary: {
+          name: {
             type: 'string',
-            description: 'Concise summary: user name, contact info, what they need, language they wrote in',
+            description: 'User\'s name or username. "Unknown" if not provided.',
+          },
+          contact: {
+            type: 'string',
+            description: 'Their Telegram, WhatsApp, phone, or email. "Not provided" if not given.',
+          },
+          language: {
+            type: 'string',
+            description: 'Language the user wrote in (e.g. "English", "Ukrainian", "Polish")',
+          },
+          project_type: {
+            type: 'string',
+            description: 'Type of project: website / landing page / Telegram bot / web app / automation / e-commerce / consulting / other',
+          },
+          description: {
+            type: 'string',
+            description: 'Detailed description of what they need. Include features, integrations, purpose, audience. Write multiple sentences — more detail is better.',
+          },
+          business: {
+            type: 'string',
+            description: 'Their business type, industry, niche, or company name. "Not mentioned" if unknown.',
+          },
+          budget: {
+            type: 'string',
+            description: 'Budget range if mentioned (e.g. "~500 EUR", "small budget", "flexible"). "Not mentioned" if not discussed.',
+          },
+          deadline: {
+            type: 'string',
+            description: 'Desired launch date or urgency (e.g. "end of May", "ASAP", "no rush"). "Not mentioned" if not discussed.',
+          },
+          extra: {
+            type: 'string',
+            description: 'Everything else: existing site/branding, examples they liked, special requirements, tone of the conversation, anything notable. Leave empty string if nothing extra.',
           },
         },
-        required: ['type', 'summary'],
+        required: ['type', 'contact'],
       },
     },
   },
@@ -133,7 +173,7 @@ export async function POST(req: NextRequest) {
 
     const apiMessages: OpenAI.Chat.ChatCompletionMessageParam[] = [
       { role: 'system', content: SYSTEM_PROMPT },
-      ...messages.slice(-10),
+      ...messages.slice(-12),
     ];
 
     const completion = await client.chat.completions.create({
@@ -141,7 +181,7 @@ export async function POST(req: NextRequest) {
       messages: apiMessages,
       tools,
       tool_choice: 'auto',
-      max_tokens: 300,
+      max_tokens: 400,
       temperature: 0.75,
     });
 
@@ -150,12 +190,47 @@ export async function POST(req: NextRequest) {
     if (choice.message.tool_calls?.length) {
       const toolCall = choice.message.tool_calls[0] as OpenAI.Chat.ChatCompletionMessageToolCall;
       const fn = (toolCall as { function: { arguments: string } }).function;
-      const args = JSON.parse(fn.arguments) as { type: string; summary: string };
+      const args = JSON.parse(fn.arguments) as {
+        type: string;
+        name: string;
+        contact: string;
+        language: string;
+        project_type: string;
+        description: string;
+        business?: string;
+        budget?: string;
+        deadline?: string;
+        extra?: string;
+      };
 
       const emoji = args.type === 'job_offer' ? '💼' : '🆕';
       const label = args.type === 'job_offer' ? 'Пропозиція роботи' : 'Новий лід';
-      const tgText = `${emoji} <b>${label} з сайту</b>\n\n${args.summary}`;
-      await sendTelegramMessage(tgText);
+
+      const lines = [
+        `${emoji} <b>${label} з сайту</b>`,
+        '',
+        `👤 <b>Ім'я:</b> ${args.name}`,
+        `📱 <b>Контакт:</b> ${args.contact}`,
+        `🌐 <b>Мова:</b> ${args.language}`,
+        `🔧 <b>Тип проєкту:</b> ${args.project_type}`,
+        '',
+        `📝 <b>Опис:</b>\n${args.description}`,
+      ];
+
+      if (args.business && args.business !== 'Not mentioned') {
+        lines.push(`\n🏢 <b>Бізнес/ніша:</b> ${args.business}`);
+      }
+      if (args.budget && args.budget !== 'Not mentioned') {
+        lines.push(`💰 <b>Бюджет:</b> ${args.budget}`);
+      }
+      if (args.deadline && args.deadline !== 'Not mentioned') {
+        lines.push(`📅 <b>Дедлайн:</b> ${args.deadline}`);
+      }
+      if (args.extra && args.extra.trim()) {
+        lines.push(`\n💬 <b>Додатково:</b>\n${args.extra}`);
+      }
+
+      await sendTelegramMessage(lines.join('\n'));
 
       const followUp = await client.chat.completions.create({
         model: 'gpt-4o-mini',

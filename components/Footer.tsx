@@ -59,7 +59,7 @@ export function Footer() {
               </svg>
             </a>
             <a
-              href="https://github.com/alexvdovych"
+              href="https://github.com/Uaolexander"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 rounded-lg flex items-center justify-center border border-border text-text-low hover:text-accent hover:border-accent/40 transition-all duration-200"

@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 
 const codeLines = [
   { tokens: [{ t: 'const ', c: '#a855f7' }, { t: 'developer', c: '#eef0ff' }, { t: ' = {', c: '#8892b0' }] },
-  { tokens: [{ t: '  name', c: '#5b7fff' }, { t: ': ', c: '#8892b0' }, { t: "'Alex Vdovych'", c: '#4ade80' }, { t: ',', c: '#8892b0' }] },
+  { tokens: [{ t: '  name', c: '#5b7fff' }, { t: ': ', c: '#8892b0' }, { t: "'Alex Vdovychenko'", c: '#4ade80' }, { t: ',', c: '#8892b0' }] },
   { tokens: [{ t: '  role', c: '#5b7fff' }, { t: ': ', c: '#8892b0' }, { t: "'Web Dev & Bot Creator'", c: '#4ade80' }, { t: ',', c: '#8892b0' }] },
   { tokens: [{ t: '  skills', c: '#5b7fff' }, { t: ': ', c: '#8892b0' }, { t: '[', c: '#eef0ff' }, { t: "'Next.js'", c: '#4ade80' }, { t: ', ', c: '#8892b0' }, { t: "'TypeScript'", c: '#4ade80' }, { t: ', ', c: '#8892b0' }, { t: "'Python'", c: '#4ade80' }, { t: ']', c: '#eef0ff' }] },
   { tokens: [{ t: '}', c: '#8892b0' }] },

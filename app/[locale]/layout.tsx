@@ -15,15 +15,28 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
-  if (locale === 'uk') {
+  if (locale === 'ua') {
     return {
-      title: 'Олександр Вдовиченко, веб-розробник та розробник ботів',
+      title: 'Олександр Вдовиченко | Веб-розробник та розробник ботів',
       description:
         'Веб-розробник та розробник ботів з Познані. Роблю сайти та Telegram-боти для малого бізнесу.',
       openGraph: {
-        title: 'Олександр Вдовиченко, веб-розробник та розробник ботів',
+        title: 'Олександр Вдовиченко | Веб-розробник та розробник ботів',
         description:
           'Веб-розробник та розробник ботів з Познані. Роблю сайти та Telegram-боти для малого бізнесу.',
+      },
+    };
+  }
+
+  if (locale === 'pl') {
+    return {
+      title: 'Oleksandr Vdovychenko | Programista stron i botów',
+      description:
+        'Programista stron internetowych i botów z Poznania. Tworzę strony i boty Telegram dla małych firm.',
+      openGraph: {
+        title: 'Oleksandr Vdovychenko | Programista stron i botów',
+        description:
+          'Programista stron internetowych i botów z Poznania. Tworzę strony i boty Telegram dla małych firm.',
       },
     };
   }
@@ -40,7 +53,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as 'en' | 'ua')) {
+  if (!routing.locales.includes(locale as 'en' | 'ua' | 'pl')) {
     notFound();
   }
 

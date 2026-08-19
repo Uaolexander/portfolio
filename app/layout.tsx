@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   title: 'Oleksandr Vdovychenko, Web & Bot Developer',
   description:
     'Web and bot developer based in Poznan. I build websites and Telegram bots for small businesses.',
-  metadataBase: new URL('https://alexvdovych.vercel.app'),
+  metadataBase: new URL('https://alexvdovych.com'),
   openGraph: {
     type: 'website',
-    url: 'https://alexvdovych.vercel.app',
+    url: 'https://alexvdovych.com',
     title: 'Oleksandr Vdovychenko, Web & Bot Developer',
     description:
       'Web and bot developer based in Poznan. I build websites and Telegram bots for small businesses.',
